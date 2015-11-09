@@ -1,1 +1,1 @@
-# CS-340
+# CS-340 Databases @ Oregon State University

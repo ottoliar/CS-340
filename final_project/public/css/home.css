@@ -1,0 +1,24 @@
+body {
+    background-image: url(../images/brewery.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    text-align: center;
+}
+
+html {
+    height: 100%;
+}
+
+h2, h3, h4, ol {
+    font-family: times, "Times New Roman", times-roman, Georgia, serif;
+    color: darkslategrey;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#main {
+    background-color: rgba(255,255,255,0.5);
+    position: relative;
+    top: 10%;
+    list-style-position: inside;
+}

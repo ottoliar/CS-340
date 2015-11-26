@@ -22,7 +22,7 @@
                 </p>
             </h3>
             <h4>
-                Top 5 Rated Breweries:
+                Top 3 Rated Breweries:
             </h4>
             <ol>
                 <?php

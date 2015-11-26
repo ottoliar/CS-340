@@ -10,7 +10,8 @@
 
         <div id="main">
             <h2>
-                Use the filters below to view the beers offered by the breweries in the database.
+                Use the filters below to view the beers offered by the breweries in the database.<br>
+                Or, click 'Search Beers' without using the filters to get all beers in the database.
             </h2>
             <form class="form-inline" action="b_process.php" method="GET">
 

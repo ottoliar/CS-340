@@ -25,9 +25,8 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <li><a href="beers.php">Beers</a></li>
-        <li><a href="">Breweries</a></li>
-        <li><a href="#">Employees</a></li>
-        <li><a href="#">Locations</a></li>
+        <li><a href="breweries.php">Breweries</a></li>
+        <li><a href="employees.php">Employees</a></li>
         <li><a href="#">Add</a></li>
       </ul>
     </div><!-- /.navbar-collapse -->

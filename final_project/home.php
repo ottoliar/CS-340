@@ -22,13 +22,13 @@
                 </p>
             </h3>
             <h4>
-                Top 3 Rated Breweries:
+                Top 5 Rated Breweries:
             </h4>
             <ol>
                 <?php
                 $query = <<<stmt
                 SELECT name, rating FROM breweries
-                ORDER BY rating DESC limit 3
+                ORDER BY rating DESC limit 3;
 stmt;
                 $stmt = $mysql->prepare($query);
                 $stmt->execute();

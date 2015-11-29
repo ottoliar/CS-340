@@ -37,10 +37,11 @@
                     $query = <<<stmt
                     SELECT beers.name, beers.type, beers.style, beers.abv, GROUP_CONCAT(breweries.name) AS found_at
                     FROM breweries INNER JOIN serves on breweries.id = serves.brewery_id INNER JOIN beers ON
-                    beers.id = serves.beer_id WHERE beers.type = "$type" AND beers.style = "$style" AND beers.abv > $lo
-                    AND beers.abv < $hi GROUP BY beers.name;
+                    beers.id = serves.beer_id WHERE beers.type = ? AND beers.style = ? AND beers.abv > ?
+                    AND beers.abv < ? GROUP BY beers.name;
 stmt;
                     $stmt = $mysql->prepare($query);
+                    $stmt->bind_param('ssii', $type, $style, $lo, $hi);
                     $stmt->execute();
                     $stmt->store_result();
                     $stmt->bind_result($name, $style, $type, $abv, $found_at);

@@ -14,6 +14,7 @@
                 employee data of breweries through public records. If you are<br>
                 looking for the most popular beers, the employee's favorite beer<br>
                 should be a good indication of what will sell well in that region!<br>
+                (Select location for specific location or submit for all employees)
             </h2>
 
             <form class="form-inline" action="e_process.php" method="GET">

@@ -7,6 +7,7 @@
         <link rel="stylesheet" href="./public/css/employees.css">
     </head>
     <body>
+        <h2>Employees returned by query:</h2>
         <div id="main">
 
             <table class="table">

@@ -7,6 +7,7 @@
         <link rel="stylesheet" href="./public/css/beer.css">
     </head>
     <body>
+        <h2>Beers returned by query:</h2>
         <div id="main">
             <table class="table">
                 <tr>

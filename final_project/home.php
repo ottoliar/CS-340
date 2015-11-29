@@ -22,20 +22,20 @@
                 </p>
             </h3>
             <h4>
-                Top 3 Rated Breweries:
+                Top 5 Rated Breweries:
             </h4>
             <ol>
                 <?php
                 $query = <<<stmt
                 SELECT name, rating FROM breweries
-                ORDER BY rating DESC limit 3;
+                ORDER BY rating DESC limit 5;
 stmt;
                 $stmt = $mysql->prepare($query);
                 $stmt->execute();
                 $stmt->bind_result($name, $rating);
                 while ($stmt->fetch()) {
                     echo <<<res
-                    <li>Name: $name Rating: $rating/5</li>
+                    <li>$name $rating/5</li>
 res;
                 }
                 ?>

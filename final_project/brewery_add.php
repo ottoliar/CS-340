@@ -20,7 +20,7 @@ stmt;
 
         if ($i_num_rows > 0) {
             echo <<<res
-            <h2>Brewery already exists in the database. Sorry, we only accept new submissions</h2>
+            <h2>Brewery already exists in the database. Sorry, we only accept new submissions.</h2>
 res;
             exit();
         }

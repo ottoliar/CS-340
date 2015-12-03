@@ -41,7 +41,17 @@ stmt;
                         $stmt = $mysql->prepare($query);
                         $stmt->bind_param('ss', $city, $state);
                         $stmt->execute();
+                        $stmt->store_result();
                         $stmt->bind_result($b_name, $f_name, $l_name, $age, $pos, $pay, $fav_beer);
+                        $num_rows = $stmt->num_rows;
+
+                        if ($num_rows == 0) {
+                            echo <<<res
+                            <h2>Sorry, we don't have any employee records for that location.</h2>
+res;
+                            exit();
+                        }
+
                         while ( $stmt->fetch() ) {
 
                             echo <<<res
@@ -70,7 +80,17 @@ res;
 stmt;
                         $stmt = $mysql->prepare($query);
                         $stmt->execute();
+                        $stmt->store_result();
                         $stmt->bind_result($b_name, $f_name, $l_name, $age, $pos, $pay, $fav_beer);
+                        $num_rows = $stmt->num_rows;
+
+                        if ($num_rows == 0) {
+                            echo <<<res
+                            <h2>Sorry, we don't have any employee records for that location.</h2>
+res;
+                            exit();
+                        }
+
                         while ( $stmt->fetch() ) {
 
                             echo <<<res

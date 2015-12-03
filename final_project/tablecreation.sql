@@ -26,7 +26,7 @@ CREATE TABLE breweries (
 	rating INT,
 	location_id INT NOT NULL,
 	PRIMARY KEY (id),
-	FOREIGN KEY (location_id) REFERENCES locations (id)
+	FOREIGN KEY (location_id) REFERENCES locations (id) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE = InnoDB DEFAULT CHARSET = utf8;
 
 CREATE TABLE employees (
@@ -39,22 +39,22 @@ CREATE TABLE employees (
 	brewery_id INT NOT NULL,
 	beer_id INT NOT NULL,
 	PRIMARY KEY (id), 
-	FOREIGN KEY (brewery_id) REFERENCES breweries (id),
-	FOREIGN KEY (beer_id) REFERENCES beers (id)
+	FOREIGN KEY (brewery_id) REFERENCES breweries (id) ON DELETE CASCADE,
+	FOREIGN KEY (beer_id) REFERENCES beers (id) ON DELETE CASCADE
 ) ENGINE = InnoDB DEFAULT CHARSET = utf8;
 
 CREATE TABLE contains (
 	amenity_id INT NOT NULL,
 	brewery_id INT NOT NULL,
 	PRIMARY KEY (amenity_id, brewery_id),
-	FOREIGN KEY (amenity_id) REFERENCES amenities (id),
-	FOREIGN KEY (brewery_id) REFERENCES breweries (id)
+	FOREIGN KEY (amenity_id) REFERENCES amenities (id) ON DELETE CASCADE,
+	FOREIGN KEY (brewery_id) REFERENCES breweries (id) ON DELETE CASCADE
 ) ENGINE = InnoDB DEFAULT CHARSET = utf8;
 
 CREATE TABLE serves (
 	beer_id INT NOT NULL,
 	brewery_id INT NOT NULL,
 	PRIMARY KEY (beer_id, brewery_id),
-	FOREIGN KEY (beer_id) REFERENCES beers (id),
-	FOREIGN KEY (brewery_id) REFERENCES breweries (id)
+	FOREIGN KEY (beer_id) REFERENCES beers (id) ON DELETE CASCADE,
+	FOREIGN KEY (brewery_id) REFERENCES breweries (id) ON DELETE CASCADE
 ) ENGINE = InnoDB DEFAULT CHARSET = utf8;
